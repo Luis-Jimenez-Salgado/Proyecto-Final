@@ -12,3 +12,13 @@ class Cliente(Base):
 
     def __repr__(self):
         return f"<Cliente(nombre='{self.nombre}', correo_electronico='{self.correo_electronico}')>"
+
+class Ingrediente(Base):
+    __tablename__ = 'ingredientes'
+
+    id = Column(Integer, primary_key=True, index=True)
+    nombre = Column(String, unique=False, nullable=False)
+    tipo = Column(String, nullable=False)
+    cantidad = Column(float, nullable=False)
+    unidad = Column(String, nullable=False)
+ 
